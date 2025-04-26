@@ -20,7 +20,7 @@ const LoginPage = () => {
   const handleLogin = async () => {
     if (username === "admin" && password === "password") {
       setError(null);
-      router.push('/');
+      router.push('/main');
     } else {
       setError("Nädogry ulanyjy ady ýa-da parol."); // Nädogry ulanyjy ady ýa-da parol. - Invalid username or password.
     }
