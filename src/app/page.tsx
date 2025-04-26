@@ -79,6 +79,11 @@ export default function Home() {
     router.push(`/?sessionId=${sessionId}`); // Join the session
   };
 
+  const handleLeaveSession = () => {
+      router.push('/'); // Navigate back to the home page
+      setSessionId(''); // Clear the session ID
+  };
+
   useEffect(() => {
     // Get session ID from URL parameters on component mount
     const urlParams = new URLSearchParams(window.location.search);
@@ -127,7 +132,7 @@ export default function Home() {
                   )}
                   <span>{isScreenSharing ? "Paýlaşmagy bes et" : "Ekrany paýlaş"}</span> {/* Paýlaşmagy bes et - Stop Share, Ekrany paýlaş - Share Screen */}
                 </Button>
-                <Button variant="destructive">
+                <Button variant="destructive" onClick={handleLeaveSession}>
                   <PhoneOff size={20} />
                   <span>Çyk</span> {/* Çyk - Leave */}
                 </Button>
