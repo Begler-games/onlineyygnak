@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from 'next/navigation';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -14,11 +15,12 @@ const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
+  const router = useRouter();
 
   const handleLogin = async () => {
     if (username === "admin" && password === "password") {
       setError(null);
-      alert("Giriş üstünlikli!"); // Giriş üstünlikli! - Login successful!
+      router.push('/');
     } else {
       setError("Nädogry ulanyjy ady ýa-da parol."); // Nädogry ulanyjy ady ýa-da parol. - Invalid username or password.
     }
@@ -63,4 +65,3 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
-
