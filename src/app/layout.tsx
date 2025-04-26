@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'ConnectNow',
-  description: 'Video conferencing and collaboration app',
+  description: 'Wideo konferensiýa we hyzmatdaşlyk programmasy', //Wideo konferensiýa we hyzmatdaşlyk programmasy - Video conferencing and collaboration app
 };
 
 export default function RootLayout({
@@ -30,4 +30,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 

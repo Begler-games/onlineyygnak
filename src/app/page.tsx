@@ -32,7 +32,7 @@ export default function Home() {
   const [isMicOn, setIsMicOn] = useState(true);
   const [isScreenSharing, setIsScreenSharing] = useState(false);
   const [messages, setMessages] = useState([
-    { sender: "Alice", text: "Hello everyone!" },
+    { sender: "Alice", text: "Hemmä salam!" }, // Hemmä salam! - Hello everyone!
     { sender: "Bob", text: "Hi Alice!" },
   ]);
 
@@ -45,12 +45,12 @@ export default function Home() {
   };
 
   const sendMessage = (text: string) => {
-    setMessages([...messages, { sender: "You", text }]);
+    setMessages([...messages, { sender: "Sen", text }]); // Sen - You
   };
 
   return (
     <div className="flex h-screen w-screen bg-secondary">
-      {/* Video Conference Section */}
+      {/* Video Konferensiýa Bölümi */} {/* Video Conference Section */}
       <div className="flex-1 flex flex-col items-center justify-center p-4">
         <div className="grid grid-cols-3 gap-4 w-full max-w-[1920px]">
           {users.map((user) => (
@@ -69,11 +69,11 @@ export default function Home() {
             </div>
           ))}
         </div>
-        {/* Meeting Controls */}
+        {/* Duşuşyk Dolandyryşlary */} {/* Meeting Controls */}
         <div className="flex justify-center space-x-4 mt-4">
           <Button variant="ghost" onClick={toggleMic}>
             {isMicOn ? <Mic size={20} /> : <MicOff size={20} />}
-            <span>{isMicOn ? "Mute" : "Unmute"}</span>
+            <span>{isMicOn ? "Sesini öçür" : "Sesi aç"}</span> {/* Sesini öçür - Mute, Sesi aç - Unmute */}
           </Button>
           <Button variant="ghost" onClick={toggleScreenSharing}>
             {isScreenSharing ? (
@@ -81,18 +81,18 @@ export default function Home() {
             ) : (
               <ScreenShare size={20} />
             )}
-            <span>{isScreenSharing ? "Stop Share" : "Share Screen"}</span>
+            <span>{isScreenSharing ? "Paýlaşmagy bes et" : "Ekrany paýlaş"}</span> {/* Paýlaşmagy bes et - Stop Share, Ekrany paýlaş - Share Screen */}
           </Button>
           <Button variant="destructive">
             <PhoneOff size={20} />
-            <span>Leave</span>
+            <span>Çyk</span> {/* Çyk - Leave */}
           </Button>
         </div>
       </div>
 
-      {/* In-Meeting Chat Section */}
+      {/* Duşuşykda Söhbet Bölümi */} {/* In-Meeting Chat Section */}
       <div className="w-96 bg-gray-100 p-4 flex flex-col">
-        <div className="font-bold mb-2">Meeting Chat</div>
+        <div className="font-bold mb-2">Duşuşyk Söhbeti</div> {/* Meeting Chat */}
         <div className="flex-1 overflow-y-auto mb-2">
           <ScrollArea className="h-[calc(100vh-200px)]">
             {messages.map((message, index) => (
@@ -127,12 +127,13 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage }) => {
     <div className="flex items-center">
       <Input
         type="text"
-        placeholder="Type your message..."
+        placeholder="Hat ýazyň..."  /* Hat ýazyň... - Type your message... */
         className="flex-1 mr-2"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <Button onClick={handleSendMessage}>Send</Button>
+      <Button onClick={handleSendMessage}>Ugrat</Button>  /* Ugrat - Send */
     </div>
   );
 };
+

@@ -18,9 +18,9 @@ const LoginPage = () => {
   const handleLogin = async () => {
     if (username === "admin" && password === "password") {
       setError(null);
-      alert("Login successful!");
+      alert("Giriş üstünlikli!"); // Giriş üstünlikli! - Login successful!
     } else {
-      setError("Invalid username or password.");
+      setError("Nädogry ulanyjy ady ýa-da parol."); // Nädogry ulanyjy ady ýa-da parol. - Invalid username or password.
     }
   };
 
@@ -28,8 +28,9 @@ const LoginPage = () => {
     <div className="flex items-center justify-center h-screen bg-secondary">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle>Login</CardTitle>
-          <CardDescription>Enter your username and password to log in</CardDescription>
+          <CardTitle>Giriş</CardTitle>  {/* Giriş - Login */}
+          <CardDescription>Hasaba girmek üçin ulanyjy adyňyzy we parolyňyzy giriziň</CardDescription>
+           {/* Hasaba girmek üçin ulanyjy adyňyzy we parolyňyzy giriziň - Enter your username and password to log in */}
         </CardHeader>
         <CardContent className="grid gap-4">
           {error && (
@@ -41,7 +42,7 @@ const LoginPage = () => {
           <div className="grid gap-2">
             <Input
               type="text"
-              placeholder="Username"
+              placeholder="Ulanyjy ady"  /* Ulanyjy ady - Username */
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -49,12 +50,12 @@ const LoginPage = () => {
           <div className="grid gap-2">
             <Input
               type="password"
-              placeholder="Password"
+              placeholder="Parol" /* Parol - Password */
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <Button onClick={handleLogin}>Login</Button>
+          <Button onClick={handleLogin}>Giriş</Button>  {/* Giriş - Login */}
         </CardContent>
       </Card>
     </div>
@@ -62,3 +63,4 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+
