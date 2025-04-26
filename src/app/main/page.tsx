@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, {useState, useRef, useEffect} from 'react';
@@ -21,7 +20,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import {MoreVertical, Phone, PhoneOff, Mic, MicOff, Camera, CameraOff, ScreenShare, Stop, Users, XCircle} from 'lucide-react';
+import {MoreVertical, Phone, PhoneOff, Mic, MicOff, Camera, CameraOff, ScreenShare, Users, XCircle} from 'lucide-react';
 
 const Main = () => {
   const router = useRouter();
@@ -168,7 +167,7 @@ const Main = () => {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Button variant="outline" size="icon" onClick={toggleShareScreen}>
-                    {isSharingScreen ? <Stop className="h-5 w-5"/> : <ScreenShare className="h-5 w-5"/>}
+                    {isSharingScreen ? <XCircle className="h-5 w-5"/> : <ScreenShare className="h-5 w-5"/>}
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
