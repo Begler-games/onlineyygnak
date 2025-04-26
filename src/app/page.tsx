@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/alert";
 import { v4 as uuidv4 } from 'uuid'; // Import UUID generator
 import { useRouter } from 'next/navigation';
+import {ModeToggle} from "@/components/ui/mode-toggle"
 
 const users = [
   { id: "1", name: "Myrat", imageUrl: "https://picsum.photos/id/237/100/100" },
@@ -159,6 +160,7 @@ export default function Home() {
               </div>
             </div>
           )}
+          <ModeToggle />
 
       </div>
 
