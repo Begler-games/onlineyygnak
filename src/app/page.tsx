@@ -20,20 +20,20 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 const users = [
-  { id: "1", name: "Alice", imageUrl: "https://picsum.photos/id/237/100/100" },
-  { id: "2", name: "Bob", imageUrl: "https://picsum.photos/id/238/100/100" },
-  { id: "3", name: "Charlie", imageUrl: "https://picsum.photos/id/239/100/100" },
-  { id: "4", name: "Diana", imageUrl: "https://picsum.photos/id/240/100/100" },
-  { id: "5", name: "Ethan", imageUrl: "https://picsum.photos/id/241/100/100" },
-  { id: "6", name: "Fiona", imageUrl: "https://picsum.photos/id/242/100/100" },
+  { id: "1", name: "Myrat", imageUrl: "https://picsum.photos/id/237/100/100" },
+  { id: "2", name: "Bahar", imageUrl: "https://picsum.photos/id/238/100/100" },
+  { id: "3", name: "Çynar", imageUrl: "https://picsum.photos/id/239/100/100" },
+  { id: "4", name: "Dünýä", imageUrl: "https://picsum.photos/id/240/100/100" },
+  { id: "5", name: "Emin", imageUrl: "https://picsum.photos/id/241/100/100" },
+  { id: "6", name: "Firuza", imageUrl: "https://picsum.photos/id/242/100/100" },
 ];
 
 export default function Home() {
   const [isMicOn, setIsMicOn] = useState(true);
   const [isScreenSharing, setIsScreenSharing] = useState(false);
   const [messages, setMessages] = useState([
-    { sender: "Alice", text: "Hemmä salam!" }, // Hemmä salam! - Hello everyone!
-    { sender: "Bob", text: "Hi Alice!" },
+    { sender: "Myrat", text: "Hemmä salam!" }, // Hemmä salam! - Hello everyone!
+    { sender: "Bahar", text: "Hi Alice!" },
   ]);
 
   const toggleMic = () => {
@@ -136,4 +136,3 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage }) => {
     </div>
   );
 };
-
